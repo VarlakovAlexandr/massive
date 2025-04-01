@@ -599,10 +599,20 @@ span.pagination-nav path {
 h1 {
   font-family: var(--inter);
   font-weight: 700;
-  font-size: 38px;
+  font-size: 28px;
   line-height: 132%;
   text-transform: uppercase;
   color: var(--white);
+}
+@media (min-width: 390px) {
+  h1 {
+    font-size: calc(28px + (1vw - 3.9px) * 25);
+  }
+}
+@media (min-width: 430px) {
+  h1 {
+    font-size: 38px;
+  }
 }
 @media (min-width: 1024px) {
   h1 {
@@ -623,7 +633,7 @@ h1 {
 h2 {
   font-family: var(--inter);
   font-weight: 700;
-  font-size: 32px;
+  font-size: 26px;
   line-height: 125%;
   text-transform: uppercase;
   color: #fff;
@@ -631,6 +641,16 @@ h2 {
 @media (min-width: 1024px) {
   h2 {
     line-height: 130%;
+  }
+}
+@media (min-width: 390px) {
+  h2 {
+    font-size: calc(26px + (1vw - 3.9px) * 15);
+  }
+}
+@media (min-width: 430px) {
+  h2 {
+    font-size: 32px;
   }
 }
 @media (min-width: 1024px) {
@@ -647,7 +667,7 @@ h2 {
 h3, .s-slogan h2 {
   font-family: var(--inter);
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 133%;
   text-transform: uppercase;
   color: #fff;
@@ -655,6 +675,16 @@ h3, .s-slogan h2 {
 @media (min-width: 1024px) {
   h3, .s-slogan h2 {
     line-height: 120%;
+  }
+}
+@media (min-width: 390px) {
+  h3, .s-slogan h2 {
+    font-size: calc(20px + (1vw - 3.9px) * 10);
+  }
+}
+@media (min-width: 430px) {
+  h3, .s-slogan h2 {
+    font-size: 24px;
   }
 }
 @media (min-width: 1024px) {

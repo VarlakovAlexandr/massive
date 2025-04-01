@@ -42,10 +42,11 @@
 h1{
     font-family: var(--inter);
     font-weight: 700;
-    font-size: 38px;
+    font-size: 28px;
     line-height: 132%;
     text-transform: uppercase; 
 
+    @include calculateResponsiveProperty(390px, 430px, 28px, 38px, font-size);
     @include calculateResponsiveProperty(1024px, 1920px, 38px, 60px, font-size);
     
     @media (min-width: 1024px){
@@ -58,26 +59,28 @@ h1{
 h2{
     font-family: var(--inter);
     font-weight: 700;
-    font-size: 32px;
+    font-size: 26px;
     line-height: 125%;
     text-transform: uppercase;
     color: #fff;
     @media (min-width: 1024px){
         line-height: 130%;
     }
+    @include calculateResponsiveProperty(390px, 430px, 26px, 32px, font-size);
     @include calculateResponsiveProperty(1024px, 1920px, 32px, 40px, font-size);
 }
 
 h3, .s-slogan h2{
     font-family: var(--inter);
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 133%;
     text-transform: uppercase;
     color: #fff;
     @media (min-width: 1024px){
         line-height: 120%;
     }
+    @include calculateResponsiveProperty(390px, 430px, 20px, 24px, font-size);
     @include calculateResponsiveProperty(1024px, 1920px, 24px, 30px, font-size);
     
 
