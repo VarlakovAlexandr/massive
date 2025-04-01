@@ -58,7 +58,17 @@
         transition: ease 300ms;
     }
 }
-
+.history-point:not(.active){
+    
+    &:hover{
+        color: var(--grey-500);
+        &::after{
+            
+            transform: scale(1.4);
+            background: var(--grey-500);
+        }
+    }
+}
 
 .history-point.active{
     color: var(--accent);

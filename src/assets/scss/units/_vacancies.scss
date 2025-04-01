@@ -32,6 +32,35 @@
     @include calculateResponsiveProperty(1024px, 1920px, 24px, 48px, padding);
 }
 
+.vacancy{
+    .close-state{
+        display: none;
+    }
+}
+
+.vacancy.active{
+    .start-state{
+        display: none;
+    }
+    .close-state{
+        display: inline-block;
+    }
+
+    .vacancy__description{
+        max-height: 3000px;
+
+        -webkit-line-clamp: unset;
+    }
+}
+
+.vacancy.active.closing{
+    .vacancy__description{
+        max-height: 56px;
+        -webkit-line-clamp: unset;
+        transition: linear 300ms;
+    }
+}
+
 .vacancy__img{
     aspect-ratio: 1 / 1;
     position: relative;
@@ -83,12 +112,19 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 
-    opacity: 0.4;
+    //opacity: 0.4;
+
+    color: rgba($color: #a2a2a2, $alpha: .4);
+
+    max-height: 56px;
+    transition: linear 500ms;
 
     @media (min-width: 1024px){
-        opacity: 1;
+        color: rgba($color: #a2a2a2, $alpha: 1);
     }
 }
+
+
 
 .vacancy__details-list{
     display: flex;
@@ -204,8 +240,15 @@
         padding: 24px;
         background: var(--grey-700);
         height: auto;
-
+        transition: 300ms ease;
         @include calculateResponsiveProperty(1024px, 1920px, 24px, 32px, padding);
+
+        &:hover{
+            background: var(--grey-600);
+        }
+        &:active{
+            background: var(--grey-500);
+        }
     }
 
     
@@ -259,4 +302,38 @@
         grid-column: 1 / 2;
         grid-row: 3 / 4;
     }   
+}
+
+.vac-hidden-content {
+}
+.vac-hidden-content__inner {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    
+}
+.vac-description-block{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    padding-top: 16px;
+
+    ul{
+        list-style: disc;
+        padding-left: 1.5em;
+        list-style-position: outside;
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        color: #a2a2a2;
+        li{
+
+        }
+    }
+}
+.vac-description-block__title{
+    color: #fff;
+    margin-bottom: 8px;
 }

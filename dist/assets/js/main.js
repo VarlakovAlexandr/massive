@@ -447,3 +447,35 @@ if ( historyTextContents.length && swiperHistoryText ){
 	})
 
 }
+
+
+const openVacanciyBtns = document.querySelectorAll('.open-vacancy');
+
+if ( openVacanciyBtns.length ){
+	openVacanciyBtns.forEach( btn => {
+		btn.addEventListener('click', function(){
+			const parent = this.closest('.vacancy');
+			const vacancyDescription = parent.querySelector('.vacancy__description');
+
+			if ( parent.classList.contains('close-animating') ) return false;
+
+			if ( !parent.classList.contains('active') ){
+				parent.classList.add('active');
+			} else {
+
+				const closingFunction = function(){
+					parent.classList.remove('closing');
+					parent.classList.remove('active');
+
+					vacancyDescription.removeEventListener('transitionend', closingFunction);	
+				}
+				
+				vacancyDescription.addEventListener('transitionend', closingFunction);
+
+
+				parent.classList.add('closing');
+			}
+
+		})
+	} )
+}
