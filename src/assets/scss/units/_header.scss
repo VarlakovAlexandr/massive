@@ -1,0 +1,236 @@
+.header{
+    /*position: sticky;
+    top: 0;*/
+    
+}
+
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    min-height: 46px;
+    z-index: 100;
+    @include calculateResponsiveProperty(1024px, 1920px, 46px, 96px, min-height);
+}
+
+.header__logo{
+    display: inline-block;
+    width: 46px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    @include calculateResponsiveProperty(1024px, 1920px, 46px, 96px, width);
+
+    img{
+        width: 100%;
+        height: auto;        
+    }
+}
+
+
+.header-nav{
+    display: none;
+
+    @media (min-width: 1280px){
+        display: flex;
+    }
+}
+
+.header-menu{
+    display: flex;
+    column-gap: 16px;
+    @include calculateResponsiveProperty(1280px, 1920px, 16px, 26px, column-gap);
+    li{
+        position: relative;
+        display: flex;   
+        column-gap: 15px;
+        align-items: center;
+        padding: 4px 10px;
+        cursor: pointer;
+        svg{
+            flex-shrink: 0;
+            transition: ease-in 300ms;
+        }
+
+        path{
+            transition: ease-in 300ms;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: #363636;
+            opacity: 0;
+            transition: ease 300ms;
+        }
+    }
+    
+
+    a{
+        color: #fff;
+
+        
+    }
+
+    & > li{
+        position: relative;
+        
+        &:hover{
+            &::before{
+                opacity: 1;
+            }
+
+
+            .sub-menu{
+                display: flex;
+            }
+            svg{
+                //transform: rotate(-180deg);
+            }
+
+            & > a{
+                //color: #00b15a;
+            }
+
+            path{
+                //fill: #00b15a;
+            }
+        }
+    }
+}
+
+.sub-menu{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(0, 100%);
+    
+    width: 320px;
+    padding: 34px 24px 24px;
+    display: none;
+    flex-direction: column;
+    row-gap: 4px;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 10px);
+        background-color: #363636;
+    }
+
+    a{
+        &:hover{
+            color: var(--accent);
+        }
+        &:active{
+            color: var(--primary);
+        }
+    }
+}
+
+.hamburer{
+    width: 32px;
+    height: 32px;
+    img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    @media (min-width: 1280px){
+        display: none;
+    }
+}
+
+
+.header-contacts {
+    display: flex;
+    column-gap: 26px;
+    align-items: center;
+}
+.header-contacts__caption {
+    display: none;
+
+    color: var(--white);
+
+    @include calculateResponsiveProperty(1024px, 1920px, 16px, 20px, font-size);
+
+    @media (min-width: 1600px){
+        display: block;
+    }
+
+}
+.header-contacts__links {
+    display: flex;
+    column-gap: 8px;
+
+    a:hover{
+        opacity: .8;
+    }
+}
+
+.header-contacts__links a{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+    svg{
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+        @media (min-width: 1600px){
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    
+
+    span{
+        display: none;
+
+        font-family: var(--inter);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 156%;
+
+        @media (min-width: 1600px){
+            display: inline-block;
+        }
+    }
+}
+
+.phone {   
+    color: var(--white);
+
+    @media (min-width: 1600px){
+        order: 2;
+        border: 2px solid #fff;
+        padding: 6px 8px;
+    }
+}
+.email {
+    color: var(--grey-800);
+    @media (min-width: 1600px){
+        order: 1;
+        padding: 6px 8px;
+        background-color: var(--white);
+
+        path{
+            fill: var(--grey-800);
+        }
+    }
+}
+
+

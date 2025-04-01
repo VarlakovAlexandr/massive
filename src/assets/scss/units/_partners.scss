@@ -1,0 +1,51 @@
+.partners{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+
+    @include calculateResponsiveProperty(1024px, 1920px, 32px, 40px, row-gap);
+}
+
+.swiper.partners-slider{
+    width: 100%;
+
+    padding-right: 16px;    
+	
+	@include calculateResponsiveProperty(480px, 768px, 16px, 32px, padding-right);	
+	@include calculateResponsiveProperty(769px, 1024px, 32px, 48px, padding-right);
+
+
+    @media (max-width: 480px){
+        --w: 16px;
+    }
+
+    @media (min-width: 480px){
+        --w: calc(16px + (1vw - 4.8px) * 5.5555555556);
+    }
+    @media (min-width: 769px){
+        --w: calc(32px + (1vw - 7.69px) * 6.2745098039);
+    }
+
+    @media (min-width: 1024px){
+        --w: 0px
+    }
+
+    width: calc(100% + var(--w));
+
+
+    .swiper-slide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--grey-700);
+
+        padding: 32px 56px;
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        height: auto;
+        max-height: 136px;
+    }
+}

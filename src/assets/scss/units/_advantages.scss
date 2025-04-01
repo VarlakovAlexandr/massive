@@ -1,0 +1,48 @@
+.advantages{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+
+    @include calculateResponsiveProperty(1024px, 1920px, 32px, 40px, row-gap);
+}
+
+.advantages-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+
+    @include calculateResponsiveProperty(1024px, 1920px, 16px, 24px, grid-gap);
+
+    @media (min-width: 800px){
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.advantage-item{
+    padding: 76px 24px 24px;
+    background-color: var(--grey-700);
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    position: relative;
+
+    @include calculateResponsiveProperty(1024px, 1920px, 24px, 48px, padding);
+    @include calculateResponsiveProperty(1024px, 1920px, 76px, 152px, padding-top);
+    @include calculateResponsiveProperty(1024px, 1920px, 8px, 16px, row-gap);
+
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: var(--primary);
+
+        @include calculateResponsiveProperty(1024px, 1920px, 24px, 48px, top);
+        @include calculateResponsiveProperty(1024px, 1920px, 24px, 48px, right);
+
+    }
+}

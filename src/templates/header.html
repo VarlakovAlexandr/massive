@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru_RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Краткое описание страницы"/>
+    <title>Сайт</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">         
+    <link rel="stylesheet" href="assets/css/fonts.min.css">     
+    <link rel="stylesheet" href="assets/css/fancybox.min.css">     
+    <link rel="stylesheet" href="assets/css/swiper.min.css">     
+    <link rel="stylesheet" href="assets/css/main.min.css">     
+    
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__nav-block">
+                <button class="hamburer">
+                    <img src="assets/img/burger.svg" alt="">
+                </button>
+
+                <nav class="header-nav">
+                    <ul class="header-menu">
+                        <li>
+                            <a href="about.html">О КОМПАНИИ</a>
+                        </li>
+                        <li class="has-child">
+                            <a href="#">Услуги</a>
+                            <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0L5 5L10 0L0 0Z" fill="white" />
+                            </svg>
+
+                            <ul class="sub-menu">
+                                <li><a href="#">Сопровождения грузов</a></li>
+                                <li><a href="#">Пультовая охрана</a></li>
+                                <li><a href="#">Стационарный пост</a></li>
+                                <li><a href="#">Личная охрана</a></li>
+                                <li><a href="#">Установка систем видеонаблюдения</a></li>
+                                <li><a href="#">Мобильный пост</a></li>
+                                <li><a href="#">Монтаж СКУД (Турникет, шлагбаум)</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="vacancies.html">Вакансии</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">Новости</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <a href="index.html" class="header__logo">
+                <img src="assets/img/logo.svg" alt="">
+            </a>
+            <div class="header-contacts">
+                <nav class="header-nav">
+                    <ul class="header-menu">
+                        <li>
+                            <a href="about.html">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-contacts__links">
+                    <a href="tel:+78123832341" class="phone">
+                        <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.2789 27.6969C19.6634 27.6374 15.0849 27.0048 10.2899 22.2119C5.49607 17.4179 4.86444 12.8415 4.80386 11.2252C4.71411 8.76201 6.60114 6.3695 8.78098 5.43515C9.04348 5.32182 9.33094 5.27868 9.61514 5.30994C9.89935 5.34121 10.1705 5.44581 10.4021 5.61349C12.1972 6.92136 13.4357 8.89997 14.4993 10.4557C14.7333 10.7975 14.8334 11.2135 14.7804 11.6243C14.7274 12.0351 14.5251 12.4121 14.2121 12.6834L12.0233 14.3087C11.9175 14.385 11.8431 14.4971 11.8138 14.6242C11.7845 14.7513 11.8023 14.8847 11.864 14.9996C12.3598 15.9003 13.2416 17.2418 14.2513 18.2513C15.2622 19.2608 16.6668 20.2008 17.6305 20.7526C17.7513 20.8204 17.8936 20.8394 18.0279 20.8056C18.1623 20.7718 18.2786 20.6878 18.353 20.5709L19.7778 18.4027C20.0398 18.0548 20.4262 17.8218 20.8561 17.7524C21.2861 17.683 21.7263 17.7826 22.0844 18.0303C23.6629 19.1228 25.5051 20.3399 26.8536 22.0661C27.0349 22.2993 27.1503 22.5769 27.1876 22.8699C27.2249 23.1629 27.1828 23.4606 27.0656 23.7318C26.1266 25.9224 23.7504 27.7877 21.2789 27.6969Z" fill="white" />
+                        </svg>
+                        <span>+7 812 383-23-41</span>
+                    </a>
+                    <a href="mailto:INFO@MASSIV-OHRANA.RU" class="email">
+                        <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.47922 26.74C3.7723 26.74 3.19922 26.167 3.19922 25.46V7.54001C3.19922 6.83308 3.77229 6.26001 4.47922 6.26001H27.5192C28.2262 6.26001 28.7992 6.83308 28.7992 7.54001V25.46C28.7992 26.167 28.2262 26.74 27.5192 26.74H4.47922ZM15.3208 17.356C15.7359 17.6154 16.2625 17.6154 16.6776 17.356L25.729 11.6989C26.0465 11.5005 26.2392 11.1527 26.2392 10.7784C26.2392 9.92587 25.3015 9.40611 24.5785 9.85796L16.6776 14.796C16.2625 15.0554 15.7359 15.0554 15.3208 14.796L7.41994 9.85796C6.69699 9.40611 5.75922 9.92587 5.75922 10.7784C5.75922 11.1527 5.95201 11.5005 6.26938 11.6989L15.3208 17.356Z" fill="white" />
+                        </svg>
+                        <span>INFO@MASSIV-OHRANA.RU</span>
+                    </a>
+                </div>                
+            </div>
+        </div>
+    </header>
+    <main>

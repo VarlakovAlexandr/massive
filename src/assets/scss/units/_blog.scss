@@ -1,0 +1,35 @@
+.blog{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+
+    @include calculateResponsiveProperty(1024px, 1920px, 32px, 56px, row-gap);
+}
+
+
+.blog-grid{
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 100%;
+    @media (min-width: 768px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1180px){
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include calculateResponsiveProperty(1024px, 1920px, 24px, 32px, grid-gap);
+
+    
+}
+
+.blog__loader-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .btn-white{
+        width: 100%;
+        max-width: 400px;
+    }
+}

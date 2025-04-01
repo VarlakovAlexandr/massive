@@ -1,0 +1,125 @@
+.footer{
+    background: var(--grey-700);
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @include calculateResponsiveProperty(1024px, 1920px, 24px, 56px, padding-top);
+    @include calculateResponsiveProperty(1024px, 1920px, 24px, 56px, padding-bottom);
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+
+        @include calculateResponsiveProperty(1024px, 1920px, 32px, 48px, row-gap);
+    }
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+
+    @media (min-width: 768px){
+        flex-direction: row;
+        column-gap: 32px;
+        justify-content: space-between;
+    }
+    @media (min-width: 1024px){
+        justify-content: flex-start;
+    }
+    @include calculateResponsiveProperty(1024px, 1920px, 32px, 100px, column-gap);
+}
+.footer-copyright {
+    text-align: center;
+}
+
+.footer-top__left-col{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    @include calculateResponsiveProperty(1024px, 1920px, 16px, 32px, row-gap);
+}
+
+.footer-logo{
+    width: 96px;
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.footer-top__company-name{
+    color: var(--white);
+}
+
+.footer-top__right-col{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    @media (min-width: 768px){
+        width: 50%;
+    }
+    @media (min-width: 1024px){
+        width: 28%;
+    }
+}
+
+.footer-top__contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 8px;
+
+    @include calculateResponsiveProperty(1024px, 1920px, 8px, 16px, row-gap);
+
+    a{
+        &:hover{
+            color: var(--accent);
+        }
+        &:active{
+            color: var(--primary);
+        }
+    }
+}
+
+.footer-nav{
+    
+    
+    column-gap: 32px;
+
+
+
+    display: none;
+
+    @media (min-width: 1024px){
+        display: flex;
+        
+    }
+    @include calculateResponsiveProperty(1024px, 1920px, 32px, 100px, column-gap);
+}
+
+.footer-nav__menu-col{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.footer-menu{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    min-width: 110px;
+    a{
+        color: #fff;
+
+        &:hover{
+            color: var(--accent);
+        }
+        &:active{
+            color: var(--primary);
+        }
+    }
+}
+

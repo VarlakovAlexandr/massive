@@ -1,0 +1,32 @@
+.breadcrumbs{    
+   
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 32px;
+    row-gap: 8px;
+    a{
+        display: flex;
+        column-gap: 10px;        
+        color: var(--grey-400);
+        position: relative;
+        &:hover{
+            color: var(--grey-300);
+        }
+        
+        padding-right: 16px;
+        &::after{
+            content: "//";            
+            position: absolute;
+            font-size: inherit;
+            color: var(--grey-400);
+            text-decoration: none;
+            right: 0px;
+            transform: translate(100%, 0);
+        }
+    }
+
+    span{              
+        color: var(--white);
+        cursor: default;        
+    }
+}

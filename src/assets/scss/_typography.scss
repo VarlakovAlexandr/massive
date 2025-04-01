@@ -1,0 +1,94 @@
+.header-menu a, .header-contacts__caption{
+    @include text-menu;
+}
+
+.footer-copyright, .company-requisites{
+    @include text-xs($grey-400);
+}
+
+.footer-top__company-name, .footer-top__col-title, .article p, .article-card__text-content p, .pagination-fraction, .vacancy__description, .vacancy__details-list{
+    @include text-base_inter_desktop;
+}
+
+.pagination-fraction{
+    color: var(--white)
+}
+
+.footer address, .footer__work-time, .footer-menu a, .breadcrumbs a, .breadcrumbs span{
+    @include text-s;
+}
+
+.footer-top__contacts a, .vacancies-slider__title, .vacancies-slider__salary{
+    @include button-l;
+}
+
+.btn-white.lg{
+    @include button-l($background);
+}
+
+.sub-menu a{
+    @include button($white);
+    font-weight: 400;
+}
+
+
+.article-card span, .btn-white, .btn-link{
+    @include button;
+}
+
+.btn-white{
+    color: var(--background);
+}
+h1{
+    font-family: var(--inter);
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 132%;
+    text-transform: uppercase; 
+
+    @include calculateResponsiveProperty(1024px, 1920px, 38px, 60px, font-size);
+    
+    @media (min-width: 1024px){
+        line-height: 121%;
+    }
+    color: var(--white);
+
+}
+
+h2{
+    font-family: var(--inter);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: #fff;
+    @media (min-width: 1024px){
+        line-height: 130%;
+    }
+    @include calculateResponsiveProperty(1024px, 1920px, 32px, 40px, font-size);
+}
+
+h3, .s-slogan h2{
+    font-family: var(--inter);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: #fff;
+    @media (min-width: 1024px){
+        line-height: 120%;
+    }
+    @include calculateResponsiveProperty(1024px, 1920px, 24px, 30px, font-size);
+    
+
+}
+
+.article-date{
+    opacity: 0.4;
+}
+
+.advantage-item p, .map-description__city li, .history-text.swiper p{
+    @include crimsonText;
+}
+
+

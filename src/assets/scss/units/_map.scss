@@ -1,0 +1,138 @@
+.s-map{
+    max-width: 100%;
+    overflow: hidden;
+    padding-bottom: 76px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 96px;
+}
+
+.s-map__planet{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 5%);
+    z-index: -1;
+    width: 125.75vw;
+}
+
+
+.map-description{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    @include calculateResponsiveProperty(1024px, 1920px, 32px, 40px, row-gap);
+}
+
+.map-description__city{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+
+    @media (min-width: 540px){
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: 900px){
+        grid-template-columns: 1fr 1fr 1fr;
+
+        
+    }
+    @include calculateResponsiveProperty(1024px, 1920px, 16px, 32px, grid-row-gap);
+    @include calculateResponsiveProperty(1024px, 1920px, 16px, 138px, grid-column-gap);
+
+    @media (min-width: 1200px){
+        grid-template-columns: repeat(4, auto);
+    }
+
+    li{
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        &::before{
+            content: "";
+            flex-shrink: 0;
+            width: 12px;
+            height: 12px;
+            background-color: var(--primary);
+            border-radius: 50%;
+        }
+    }
+}
+
+
+.map-container{
+    display: none;
+
+    @media (min-width: 1024px){
+        display: block;
+    }
+
+
+    svg{
+        width: 100%;
+        height: auto;
+
+        path{
+            transition: ease 300ms;
+        }
+    }
+
+    position: relative;
+}
+
+.map-pin{
+    cursor: pointer;
+}
+
+.active-dots{
+    fill: var(--primary);
+}
+
+.map-text-marker{
+    position: absolute;
+    z-index: 5;
+    display: none;
+    padding-left: 15px;
+    opacity: 0;
+    animation: showcity 300ms forwards;
+    transform: translate(0, -100%);
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 217px;
+        background-color: var(--primary);
+        z-index: -1;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--primary);
+    }
+}
+
+.map-text-marker.active{    
+    display: block;
+
+    
+}
+
+@keyframes showcity {
+    to{
+        
+        opacity: 1;
+    }
+}

@@ -1,0 +1,71 @@
+@mixin text-menu{
+    font-family: var(--inter);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+    
+
+    @include calculateResponsiveProperty(1024px, 1920px, 16px, 20px, font-size);
+}
+
+
+@mixin text-base_inter($color: $grey-400){
+    font-family: var(--inter);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: $color;
+    @include calculateResponsiveProperty(1024px, 1920px, 16px, 20px, font-size);
+}
+
+@mixin text-base_inter_desktop($color: $grey-400){
+    font-family: var(--inter);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: $color;
+}
+
+@mixin text-xs($color: $grey-400){
+    font-family: var(--inter);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;   
+    color: $color;
+}
+
+@mixin text-s($color: $grey-400){
+    font-family: var(--inter);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    color: $color;
+}
+
+@mixin button-l($color: $white){
+    font-family: var(--inter);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: $color;
+}
+@mixin button($color: $white){
+    font-family: var(--inter);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: $color;
+}
+
+@mixin crimsonText($color: $white){
+    font-family: $crimson;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 133%;
+    color: $color;
+
+    @include calculateResponsiveProperty(1024px, 1920px, 24px, 28px, font-size);
+}

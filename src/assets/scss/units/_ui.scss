@@ -1,0 +1,139 @@
+.img{
+    width: 100%;
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.pagination.swiper-pagination{
+    position: static;
+    display: flex;
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 4px;
+    column-gap: 8px;
+    .swiper-pagination-bullet{
+        margin: 0;
+        width: 12px;
+        height: 12px;
+        background-color: var(--grey-600);
+    }
+
+    .swiper-pagination-bullet.swiper-pagination-bullet-active{
+        background-color: var(--primary);
+    }
+}
+.pagination.swiper-pagination.swiper-pagination-lock{
+    display: none;
+}
+
+.btn-arrow{
+    @include button-l;
+
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+    padding: 12px 20px;
+    border: 2px solid var(--white);
+    svg{
+        flex-shrink: 0;
+    }
+
+    &:hover{
+        background-color: var(--grey-700);
+    }
+    &:active{
+        background-color: var(--grey-600);
+    }
+    @media (max-width: 320px){
+        font-size: 16px;
+    }
+    @include calculateResponsiveProperty(320px, 430px, 16px, 24px, font-size);
+    
+}
+
+.btn-white, .btn-white.lg{
+    padding: 16px 24px;
+    background-color: var(--white);    
+    text-align: center;
+    color: var(--background);
+
+    &:hover{
+        color: var(--white);
+        background-color: var(--primary);
+    }
+
+    &:active{
+        color: var(--white);
+        background-color: var(--accent);
+    }
+    
+}
+
+.btn-link{
+    &:hover{
+        color: var(--accent);        
+    }
+
+    &:active{        
+        color: var(--primary);
+    }
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+.pagination-fraction{
+    background-color: var(--background);
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+a.pagination-fraction{
+    &:not(.active):hover{
+        background-color: var(--grey-800);
+    }
+}
+
+.pagination-fraction.active{
+    background-color: var(--grey-700);
+}
+.pagination-nav{
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+span.pagination-nav{
+    path{
+        fill: #4D4D4D;
+    }
+    
+}
+
+.title-block{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
